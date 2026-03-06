@@ -1,0 +1,8 @@
+PREFIX imxgeo: <http://modellen.geostandaarden.nl/def/imx-geo#> 
+PREFIX ext: <https://modellen.kkg.kadaster.nl/def/imxgeo-ext#>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+SELECT * 
+WHERE { 
+  ?geb a imxgeo:Gebouw.
+  OPTIONAL {?geb geo:hasGeometry/geo:asWKT ?gebGeom.
+}
